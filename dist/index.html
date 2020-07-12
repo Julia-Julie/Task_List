@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task List</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <!-- Section - A -->
+    <section id="task-a">
+      <div class="container">
+        <h1>TASK LIST</h1>
+        <form>
+          <div class="input-wrap">
+            <label for="task"></label>
+            <input type="text" placeholder="New Task" id="task" />
+          </div>
+          <input type="submit" value="ADD TASK" />
+        </form>
+      </div>
+    </section>
+
+    <!-- Section - B -->
+    <section id="task-b">
+      <div class="container">
+        <h1>Tasks</h1>
+        <div class="input-wrap">
+          <label for="filter"></label>
+          <input type="text" placeholder="Filter Tasks" id="filter" />
+        </div>
+        <ul class="collection"></ul>
+        <a href="#" class="btn">CLEAR TASKS</a>
+      </div>
+    </section>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>

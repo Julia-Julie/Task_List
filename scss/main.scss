@@ -1,0 +1,112 @@
+@import "config";
+
+*,
+body,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 800px;
+  padding: 1rem 1.5rem;
+  margin: auto;
+  text-align: center;
+  line-height: 1.3rem;
+  overflow: hidden;
+}
+
+.heading-shared {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 0.2rem;
+  color: $main-color;
+  text-shadow: 1px 1px 2px black;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+// EXTENDS
+.input-wrap input {
+  width: 100%;
+  margin: 0.7rem auto;
+  padding: 1rem 2rem;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid $main-color;
+  font-size: 1.2rem;
+}
+
+.input-wrap input:focus {
+  background: #cccccc;
+  border: 1px solid red;
+  border-bottom: none;
+  border-left: transparent;
+}
+
+.btn-shared {
+  padding: 1rem 2rem;
+  font-family: fantasy;
+  border: 1px solid $main-color;
+  font-size: 15px;
+  transition: 0.5s;
+
+  &:hover {
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px #333333;
+    font-size: 1.1em;
+    padding: 1rem 1rem;
+  }
+}
+
+#task {
+  &-a {
+    h1 {
+      @extend .heading-shared;
+    }
+    input[type="submit"] {
+      @extend .btn-shared;
+      background: rgb(70, 68, 68);
+      color: set-text-color(rgb(70, 68, 68));
+      width: 20%;
+    }
+  }
+
+  &-b {
+    margin-top: 3rem;
+    h1 {
+      @extend .heading-shared;
+    }
+    .btn {
+      @extend .btn-shared;
+      display: inline-block;
+      text-decoration: none;
+      background: rgb(70, 68, 68);
+      color: set-text-color(rgb(70, 68, 68));
+      width: 20%;
+    }
+  }
+}
+
+// Style app.js
+
+.collection-item {
+  background: lightblue;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 1.3rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+
+  i:hover {
+    cursor: pointer;
+  }
+  i:active {
+    color: rgb(207, 9, 9);
+    font-weight: bolder;
+  }
+}

@@ -1,0 +1,15 @@
+// Variables
+$main-color: rgb(148, 201, 185);
+$secondary-color: rgba(255, 80, 246, 0.1);
+// $btn: lightskyblue;
+$bg: #aaa;
+
+
+// Set text color
+@function set-text-color($color){
+    @if(lightness($color) > 50){
+        @return black;
+    }@else{
+        @return #ffffff;
+    }
+}
